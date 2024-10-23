@@ -8,6 +8,33 @@
     <title>Age Calculator</title>
 </head>
 <body>
-    
+    <main class="container">
+        <section class="inputBlock">
+            <div class="input">
+                <label for="day">Day</label>
+                <input type="number" class="inputField" id="day" placeholder="DD" min="1" max="31">
+                <span class="errorMsg" id="dayErrorMsg"></span>
+            </div>
+            <div class="input">
+                <label for="month">Month</label>
+                <input type="number" class="inputField" id="month" placeholder="MM" min="1" max="12">
+                <span class="errorMsg" id="monthErrorMsg"></span>
+            </div>
+            <div class="input">
+                <label for="year">Year</label>
+                <input type="number" class="inputField" id="year" placeholder="YYYY" min="1900" max="2023">
+                <span class="errorMsg" id="yearErrorMsg"></span>
+            </div>
+        </section>
+        <div class="buttonSection">
+            <hr>
+            <button class="btn" id="calculateBtn"><img src="images/icon-arrow.svg" alt="arrow-icon"></button>
+        </div>
+        <section class="results">
+            <div><span id="years">- -</span> years</div>
+            <div><span id="months">- -</span> months</div>
+            <div><span id="days">- -</span> days</div>
+        </section>
+    </main>    
 </body>
 </html>

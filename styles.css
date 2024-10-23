@@ -6,4 +6,169 @@
 }
 body {
     font-family: "Poppins", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    background-color: hsl(0, 0%, 94%);
+}
+.container {
+    width: 95%;
+    max-width: 49.75rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    padding: 4rem;
+    border-radius: 20px 20px 170px 20px;
+    box-shadow: 5px 5px 15px solid hsl(0, 0%, 89%);
+}
+.inputBlock{
+    display: flex;
+    gap: 2rem;
+    width: 75%;
+}
+.input {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    gap: .3rem;
+}
+.inputField{
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: inherit;
+    padding: .5rem 1rem;
+    border: 1px solid hsl(0, 0%, 86%);
+    border-radius: 10px;
+    width: 100%;
+}
+.inputField::placeholder{
+    font-weight: 700;
+    opacity: .6;
+}
+.inputField:focus{
+    outline: 2px solid hsl(259, 100%, 65%);
+    border: none;
+}
+.input.error .errorMsg{
+    display: block;
+}
+.input.error .inputField{
+    border: 1px solid hsl(0, 100%, 67%);
+}
+.input.error label {
+    color: hsl(0, 100%, 67%);
+}
+label {
+    text-transform: uppercase;
+    font-size: .9rem;
+    font-weight: 700;
+    color: hsl(0, 1%, 44%);
+    letter-spacing: 2px;
+}
+.errorMsg {
+    color: hsl(0, 100%, 67%);
+    font-size: .8rem;
+    margin-top: .2rem;
+    display: none;
+    font-weight: 400;
+    font-style: italic;
+}
+.buttonSection{
+    position: relative;
+
+}
+hr {
+    border: 0.5px solid hsla(0, 0%, 86%, 0.537);
+    outline: none;
+}
+.btn{
+    border: none;
+    background-color: hsl(259, 100%, 65%);
+    padding: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;       
+}
+.btn:hover {
+    background-color: hsl(0, 0%, 8%);
+}
+.results div {
+    font-size: clamp(3rem, 8vh, 5rem);
+    font-weight: 800;
+    font-style: italic;
+    color: hsl(0, 0%, 8%);
+    line-height: 1.2;
+}
+.results div span {
+    color: hsl(259, 100%, 65%);
+}
+
+
+@media screen and (max-width:800px){
+    .container{
+        padding: 2.5rem;
+    }
+}
+
+@media screen and (max-width:745px){
+    .container{
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (max-width:711px){
+    body {
+        align-items: start;
+        padding-top: 6rem;
+    }
+    .container{
+        padding: 2rem;
+        width: 90%;
+    }
+    .inputBlock{
+        width: 100%;
+    }
+    .btn {
+        left: 0;
+        right: 0;
+        margin-inline: auto;
+        width: max-content;
+    }
+    .buttonSection{
+        margin: 2rem 0;
+    }
+    .results div {
+        font-size: 4rem;
+    }
+    .inputBlock{
+        gap: .7rem;
+    }
+    .inputField {
+        padding: .5rem;
+    }
+}
+@media screen and (max-width:508px){
+    .results div {
+        font-size: 3.5rem;
+    }
+    .inputField{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width:435px){
+    .results div {
+        font-size: 3rem;
+    }
+}
+@media screen and (max-width:377px){
+    .results div {
+        font-size: 2.5rem;
+    }
 }
